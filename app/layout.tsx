@@ -1,8 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "@/styles/globals.css";
+import { Inter, IBM_Plex_Mono } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import "@/styles/globals.css";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
+import { cn } from "@/lib/utils";
+import Sidebar from "@/components/shared/Sidebar";
+import MaxContainer from "@/components/shared/MaxContainer";
+
+const inter = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +23,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          "min-h-screen font-sans antialiased flex",
+          inter.className
+        )}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange>
+          <MaxContainer className="flex gap-6 md:gap-10">
+            <Sidebar />
+            <main className="flex-1">{children}</main>
+          </MaxContainer>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
