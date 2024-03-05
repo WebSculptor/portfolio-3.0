@@ -4,8 +4,6 @@ import { IBM_Plex_Mono as FontSans } from "next/font/google";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
-import Sidebar from "@/components/shared/Sidebar";
-import MaxContainer from "@/components/shared/MaxContainer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -35,10 +33,7 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange>
-          <MaxContainer className="flex gap-6 md:gap-10">
-            <Sidebar />
-            <main className="flex-1">{children}</main>
-          </MaxContainer>
+          <main className="flex-1">{children}</main>
         </ThemeProvider>
       </body>
     </html>

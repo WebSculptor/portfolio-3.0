@@ -11,7 +11,7 @@ export default function MaxContainer({
   children,
 }: MaxContainerProps) {
   return (
-    <div className={cn("mx-auto w-full px-4 max-w-6xl", className)}>
+    <div className={cn("mx-auto w-full px-4 max-w-[800px]", className)}>
       {children}
     </div>
   );
