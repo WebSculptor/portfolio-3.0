@@ -33,7 +33,7 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange>
-          <main className="flex-1">{children}</main>
+          {children}
         </ThemeProvider>
       </body>
     </html>

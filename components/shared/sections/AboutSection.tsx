@@ -3,9 +3,9 @@ import MaxContainer from "../MaxContainer";
 
 export default function AboutSection() {
   return (
-    <MaxContainer className="flex items-start gap-8 py-20">
-      <div className="w-[150px]">
-        <p className="text-lg font-semibold">About</p>
+    <MaxContainer className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8 pt-20">
+      <div className="w-[150px] lg:sticky lg:top-10">
+        <p className="text-base font-semibold">About</p>
       </div>
 
       <div className="flex flex-col gap-3 flex-1">
