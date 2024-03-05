@@ -2,12 +2,16 @@ import React from "react";
 import MaxContainer from "../MaxContainer";
 import ProjectCard from "../cards/ProjectCard";
 import Link from "next/link";
+import { ScrollText } from "lucide-react";
 
 export default function ProjectSection() {
   return (
     <MaxContainer className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8 pt-20">
       <div className="w-[150px] lg:sticky lg:top-10">
-        <p className="text-base font-semibold">Project</p>
+        <p className="text-base font-semibold flex items-center">
+          <ScrollText className="w-4 h-4 mr-2" />
+          Project
+        </p>
       </div>
 
       <div className="flex-1 flex flex-col gap-3 w-full">

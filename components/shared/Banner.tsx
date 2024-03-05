@@ -7,12 +7,12 @@ import { ModeToggle } from "./ModeToggle";
 
 export default function Banner() {
   return (
-    <div className="w-full lg:h-[239px] py-10 lg:py-0 border-b bg-secondary flex flex-col lg:justify-end relative">
+    <div className="w-full lg:h-[239px] py-10 lg:py-0 border-b bg-secondary/80 dark:bg-secondary/50 flex flex-col lg:justify-end relative">
       <div className="absolute top-6 right-6">
         <ModeToggle />
       </div>
-      <MaxContainer className="flex items-center flex-col lg:flex-row gap-8">
-        <div className="bg-secondary w-[150px] h-[150px] rounded-full overflow-hidden lg:-mb-10 border-2 border-background group">
+      <MaxContainer className="flex items-center flex-col lg:flex-row gap-4 lg:gap-8">
+        <div className="bg-secondary w-[150px] h-[150px] rounded-full overflow-hidden lg:-mb-10 border-[5px] border-background group">
           <Image
             src="/me.jpg"
             alt="Abdullahi Salihu"
@@ -23,7 +23,7 @@ export default function Banner() {
           />
         </div>
 
-        <div className="flex flex-col items-center lg:items-start gap-4 lg:gap-2 flex-1">
+        <div className="flex flex-col items-center lg:items-start gap-2 flex-1">
           <h1 className="text-2xl font-semibold">Abdullahi Salihu</h1>
 
           <div className="flex items-center justify-center gap-x-5 gap-y-2 flex-wrap">

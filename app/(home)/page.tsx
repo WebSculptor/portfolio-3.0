@@ -12,7 +12,7 @@ export default function Home() {
       <AboutSection />
       <ProjectSection />
       <BackgroundSection type="ed" list={20} />
-      <BackgroundSection type="ex" list={20} />
+      <BackgroundSection type="ex" list={1} />
       <ContactSection />
 
       <Footer />
