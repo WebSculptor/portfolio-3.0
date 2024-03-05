@@ -11,7 +11,7 @@ export default function Home() {
       <Banner />
       <AboutSection />
       <ProjectSection />
-      <BackgroundSection type="ed" list={20} />
+      <BackgroundSection type="ed" list={2} />
       <BackgroundSection type="ex" list={1} />
       <ContactSection />
 

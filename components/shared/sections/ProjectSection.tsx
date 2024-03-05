@@ -14,13 +14,13 @@ export default function ProjectSection() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-3 w-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1">
+      <div className="flex-1 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ProjectCard id={1} />
           <ProjectCard id={2} />
         </div>
 
-        <div className="flex justify-end">
+        <div className="flex justify-end mt-3">
           <Link href="/projects" className="text-sm hover:underline">
             View More
           </Link>

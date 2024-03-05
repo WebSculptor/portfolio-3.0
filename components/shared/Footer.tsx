@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="flex flex-col gap-2 flex-1">
           <TimeFormat />
 
-          <div className="mt-2 flex items-center justify-between gap-2 lg:gap-10 flex-wrap">
+          <div className="mt-2 flex lg:items-center flex-col lg:flex-row justify-between gap-1 lg:gap-10 flex-wrap">
             <p className="text-sm text-muted-foreground">
               &copy; Copyright | All Rights Reserver
             </p>
