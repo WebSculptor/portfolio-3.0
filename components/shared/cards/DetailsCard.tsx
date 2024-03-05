@@ -4,7 +4,7 @@ export default function DetailsCard() {
       <p className="text-sm text-muted-foreground">Lead Product Designer</p>
       <p className="text-base font-medium">ITCentral Kaduna</p>
       <p className="text-xs font-normal text-muted-foreground">2016-2020</p>
-      <p className="text-muted-foreground text-sm">
+      <p className="text-muted-foreground text-xs md:text-sm">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore nemo
         provident error adipisci soluta suscipit, praesentium doloremque odit
         dolores ipsa!
