@@ -14,7 +14,7 @@ export default function ProjectSection() {
         </p>
       </div>
 
-      <div className="flex-1 flex flex-col gap-3 w-full">
+      <div className="flex flex-col gap-3 w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-1">
           <ProjectCard id={1} />
           <ProjectCard id={2} />
