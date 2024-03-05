@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Mono as FontSans } from "next/font/google";
 
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
@@ -7,8 +7,9 @@ import { cn } from "@/lib/utils";
 import Sidebar from "@/components/shared/Sidebar";
 import MaxContainer from "@/components/shared/MaxContainer";
 
-const inter = IBM_Plex_Mono({
+const fontSans = FontSans({
   subsets: ["latin"],
+  variable: "--font-sans",
   weight: ["100", "200", "300", "400", "500", "600", "700"],
 });
 
@@ -27,7 +28,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen font-sans antialiased flex",
-          inter.className
+          fontSans.variable
         )}>
         <ThemeProvider
           attribute="class"
