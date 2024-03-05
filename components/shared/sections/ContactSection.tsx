@@ -18,7 +18,7 @@ export default function ContactSection() {
         {links.map((link) => (
           <div key={link.path} className="flex items-center w-full gap-4">
             <p className="font-normal text-muted-foreground">
-              <span className="font-bold text-foreground text-sm md:text-base">
+              <span className="font-bold text-foreground text-sm lg:text-base">
                 {link.name}:{" "}
               </span>{" "}
               <Link
@@ -29,9 +29,9 @@ export default function ContactSection() {
               </Link>
             </p>
 
-            <hr className="w-full flex-1" />
+            <hr className="w-full flex-1 hidden md:flex" />
 
-            <link.icon className="w-4 h-4 text-muted-foreground" />
+            <link.icon className="w-4 h-4 text-muted-foreground hidden md:flex" />
           </div>
         ))}
       </div>
