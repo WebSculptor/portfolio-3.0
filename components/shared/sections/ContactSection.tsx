@@ -1,6 +1,8 @@
 import React from "react";
 import MaxContainer from "../MaxContainer";
 import { PhoneCall } from "lucide-react";
+import Link from "next/link";
+import { links } from "@/lib/utils";
 
 export default function ContactSection() {
   return (
@@ -12,22 +14,26 @@ export default function ContactSection() {
         </p>
       </div>
 
-      <div className="flex flex-col gap-2 flex-1">
-        <p className="font-normal text-muted-foreground">
-          <span className="font-bold text-foreground">Email: </span>{" "}
-          abdullahisalihuinusa@gmail.com
-        </p>
-        <p className="font-normal text-muted-foreground">
-          <span className="font-bold text-foreground">Phone: </span> +234 912
-          099 6480
-        </p>
-        <p className="font-normal text-muted-foreground">
-          <span className="font-bold text-foreground">Twitter: </span>{" "}
-          @web_sculptor
-        </p>
-        <p className="font-normal text-muted-foreground">
-          <span className="font-bold text-foreground">LinkedIn: </span> Connect
-        </p>
+      <div className="flex flex-col gap-2 flex-1 w-full">
+        {links.map((link) => (
+          <div key={link.path} className="flex items-center w-full gap-4">
+            <p className="font-normal text-muted-foreground">
+              <span className="font-bold text-foreground text-sm md:text-base">
+                {link.name}:{" "}
+              </span>{" "}
+              <Link
+                href={link.path}
+                target={link.target ? "_blank" : undefined}
+                className="hover:underline">
+                {link.text}
+              </Link>
+            </p>
+
+            <hr className="w-full flex-1" />
+
+            <link.icon className="w-4 h-4 text-muted-foreground" />
+          </div>
+        ))}
       </div>
     </MaxContainer>
   );
