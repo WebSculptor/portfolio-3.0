@@ -9,7 +9,7 @@ export default function ProjectCard({ id }: { id: number }) {
       className="border rounded-xl overflow-hidden shadow bg-secondary/80 dark:bg-secondary/50">
       <div className="aspect-[1.5] overflow-hidden group">
         <Image
-          src="/me.jpg"
+          src="https://fakeimg.pl/600x400/262626/fff?font=museo"
           alt="Abdullahi Salihu"
           priority
           width={150}
